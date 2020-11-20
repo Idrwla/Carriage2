@@ -1,0 +1,20 @@
+.field-area{
+  width: 80%;
+  margin-left: 20%;
+}
+.field-area-figure{
+  border-right: 4px;
+  border-color: black;
+  border-style: solid;
+  border-left: 0;
+  border-top: 0;
+  border-bottom: 0;
+}
+.details-area{
+  width: 100%;
+}
+.details-area-table{
+  width: 100%;
+  position: absolute;
+  top: 0;
+}
