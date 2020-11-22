@@ -1,0 +1,23 @@
+
+<table>
+  <tr>
+    <th>Номер вагона</th>
+    <th>Наименование</th>
+    <th>Тип</th>
+    <th>Положение</th>
+    <th>Редактировать</th>
+    <th>Удалить</th>
+  </tr>
+
+  <tr *ngFor="let railway of railways">
+    <td>{{railway.id}}</td>
+    <td>{{railway.name}}</td>
+    <td>{{railway.type}}</td>
+    <td>{{railway.state}}</td>
+    <td><button (click)="edit(railway)"><mat-icon>edit</mat-icon></button></td>
+    <td><button (click)="remove(railway)"><mat-icon>delete</mat-icon></button></td>
+  </tr>
+</table>
+<button (click)="show()">
+  click
+</button>

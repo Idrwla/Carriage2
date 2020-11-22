@@ -1,0 +1,39 @@
+<div>
+  <form [formGroup]="railway">
+    <mat-form-field>
+      <mat-label>
+        Номер вагона
+      </mat-label>
+      <input matInput formControlName="id" type="text">
+      <mat-error *ngIf="railway.invalid && railway.controls.id.invalid">Номер введенный вами не правильный</mat-error>
+    </mat-form-field><br>
+    <mat-form-field>
+      <mat-label>
+        Наименование вагона
+      </mat-label>
+      <input matInput formControlName="name" type="text">
+      <mat-error *ngIf="railway.invalid && railway.controls.name.invalid">Номер введенный вами не правильный</mat-error>
+    </mat-form-field><br>
+    <mat-form-field>
+      <mat-label>
+        Состояние
+      </mat-label>
+      <mat-select formControlName="state">
+        <mat-option value="Рабочее">
+          Рабочее
+        </mat-option>
+        <mat-option value="Не исправленное">
+          Не исправленное
+        </mat-option>
+        <mat-option value="В ремонте">
+          В ремонте
+        </mat-option>
+      </mat-select>
+      <mat-error *ngIf="railway.invalid && railway.controls.state.invalid">Номер введенный вами не правильный</mat-error>
+    </mat-form-field><br>
+    <button mat-raised-button color="primary" [disabled]="!railway.valid" (click)="addNewRailway()">
+      Добавить
+    </button>
+    <button (click)="logErrors()">errors</button>
+  </form>
+</div>
