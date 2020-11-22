@@ -2,9 +2,9 @@
   <span>Carriage</span>
 </mat-toolbar>
 <mat-grid-list cols="2" rowHeight="1:1">
-    <mat-grid-tile class="field-area-figure"><app-add-and-edit class="field-area"></app-add-and-edit></mat-grid-tile>
+    <mat-grid-tile class="field-area-figure"><app-add-and-edit #addAndEditComponentChild class="field-area"></app-add-and-edit></mat-grid-tile>
 
-    <mat-grid-tile class="details-area"><app-details class="details-area-table"></app-details></mat-grid-tile>
+    <mat-grid-tile class="details-area"><app-details class="details-area-table" (editMode)="setEditMode($event)"></app-details></mat-grid-tile>
 
 
 

@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import {Component, ViewChild} from '@angular/core';
+import {AddAndEditComponent} from './add-and-edit/add-and-edit.component';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'Carriage2';
+  @ViewChild(AddAndEditComponent) private addAndEditComp: AddAndEditComponent;
+  setEditMode(railway): void{
+    this.addAndEditComp.oldRailway = railway;
+    this.addAndEditComp.setFormStates(railway);
+    this.addAndEditComp.editMode = true;;
+  }
 }

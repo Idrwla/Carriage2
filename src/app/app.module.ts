@@ -15,6 +15,8 @@ import {MatButtonModule} from '@angular/material/button';
 import {CarriageService} from './Services/carriage.service';
 import {CarriageValidatorService} from './Services/carriage-validator.service';
 import {MatTableModule} from '@angular/material/table';
+import {LoggerService} from './Services/logger.service';
+import {MatIconModule} from '@angular/material/icon';
 
 @NgModule({
   declarations: [
@@ -32,9 +34,10 @@ import {MatTableModule} from '@angular/material/table';
     MatSelectModule,
     ReactiveFormsModule,
     MatButtonModule,
-    MatTableModule
+    MatTableModule,
+    MatIconModule
   ],
-  providers: [AddAndEditComponent, CarriageValidatorService, CarriageService],
+  providers: [CarriageService, LoggerService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
